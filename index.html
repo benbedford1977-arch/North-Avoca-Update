@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>North Avoca Update — Ben Bedford, Ray White</title>
+<meta name="description" content="What's happening around North Avoca — local news, community shout-outs, and the latest on the property market. From Ben Bedford, Ray White." />
+
+<!-- Open Graph: controls the preview card when this link is shared in a text/social -->
+<meta property="og:title" content="North Avoca Update" />
+<meta property="og:description" content="Local news, community happenings & the latest on our property market." />
+<meta property="og:type" content="website" />
+<!-- Once hosted, set this to the FULL url, e.g. https://USERNAME.github.io/north-avoca-update/images/north-avoca-aerial.jpg -->
+<!-- <meta property="og:image" content="https://YOURDOMAIN/images/north-avoca-aerial.jpg" /> -->
+
+<style>
+  :root{
+    --black:#1A1A1A;
+    --yellow:#FFE512;
+    --paper:#FAF8F3;
+    --ink:#2A2A2A;
+    --muted:#6B6B6B;
+    --line:#E7E3D8;
+    --card:#FFFFFF;
+    --maxw:640px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* Hero */
+  header.hero{
+    background:var(--black);
+    background-image:linear-gradient(180deg, rgba(26,26,26,.45) 0%, rgba(26,26,26,.78) 100%), url('images/north-avoca-aerial.jpg');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    padding:120px 0 30px;
+    text-align:center;
+    text-shadow:0 1px 16px rgba(0,0,0,.4);
+  }
+  .kicker{
+    display:inline-block;
+    background:var(--yellow);
+    color:var(--black);
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:100px;
+    margin-bottom:16px;
+  }
+  header.hero h1{
+    font-size:32px;
+    line-height:1.15;
+    font-weight:800;
+    letter-spacing:-0.5px;
+  }
+  header.hero h1 span{color:var(--yellow)}
+  header.hero p{
+    color:#CFCFCF;
+    margin-top:12px;
+    font-size:16px;
+  }
+  .byline{
+    margin-top:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    font-size:14px;
+    color:#fff;
+  }
+  .byline .dot{width:6px;height:6px;border-radius:50%;background:var(--yellow)}
+
+  /* Intro note */
+  .intro{
+    background:var(--card);
+    border-bottom:1px solid var(--line);
+    padding:26px 0;
+  }
+  .intro p{font-size:17px;color:var(--ink)}
+  .intro p + p{margin-top:12px}
+
+  /* Section heads */
+  section{padding:30px 0}
+  .sec-label{
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:18px;
+  }
+  .sec-label::before{content:"";width:26px;height:3px;background:var(--yellow);border-radius:2px}
+
+  /* Cards */
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    overflow:hidden;
+    margin-bottom:18px;
+  }
+  .card .photo{
+    width:100%;
+    aspect-ratio:16/10;
+    background:linear-gradient(135deg,#EDEAE1,#DAD5C7);
+    display:flex;align-items:center;justify-content:center;
+    color:#9A937F;font-size:13px;font-weight:600;text-align:center;padding:14px;
+  }
+  .card .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .card .photo.person img{object-position:center 20%}
+  .card .photo.logo{background:#2b3f6c}
+  .card .photo.logo img{object-fit:contain}
+  .card .body{padding:18px 18px 20px}
+  .card h3{font-size:20px;font-weight:800;letter-spacing:-0.3px;line-height:1.25}
+  .tag{
+    display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    color:var(--black);background:var(--yellow);padding:3px 9px;border-radius:6px;margin-bottom:10px;
+  }
+  .card p{margin-top:8px;color:var(--ink);font-size:15.5px}
+  .card .small{color:var(--muted);font-size:13.5px;margin-top:10px}
+
+  /* Real estate */
+  .re{background:var(--black);color:#fff;border-radius:18px;padding:26px 22px;margin-top:4px}
+  .re .sec-label{color:#9b9b9b}
+  .re .sec-label::before{background:var(--yellow)}
+  .re h2{font-size:24px;font-weight:800;letter-spacing:-0.4px;line-height:1.2}
+  .re p{color:#D6D6D6;margin-top:12px;font-size:15.5px}
+  .stats{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+  .stat{flex:1;min-width:120px;background:#262626;border:1px solid #333;border-radius:12px;padding:14px}
+  .stat .n{font-size:26px;font-weight:800;color:var(--yellow);line-height:1}
+  .stat .l{font-size:12.5px;color:#B8B8B8;margin-top:6px}
+
+  /* CTA */
+  .cta{text-align:center;padding:34px 0 12px}
+  .cta h2{font-size:23px;font-weight:800;letter-spacing:-0.3px}
+  .cta p{color:var(--muted);margin-top:8px;font-size:15.5px}
+  .btn{
+    display:inline-block;margin-top:18px;background:var(--yellow);color:var(--black);
+    font-weight:800;font-size:16px;text-decoration:none;padding:15px 28px;border-radius:100px;
+  }
+  .btn.secondary{background:transparent;color:var(--black);border:1.5px solid var(--black);margin-left:8px}
+  .btn-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+  /* Footer */
+  footer{background:var(--black);color:#9A9A9A;text-align:center;padding:28px 0;margin-top:30px;font-size:13px}
+  footer .name{color:#fff;font-weight:700;font-size:15px}
+  footer a{color:var(--yellow);text-decoration:none}
+
+  .note{background:#FFF7CC;border:1px dashed #D9C84E;border-radius:10px;padding:10px 12px;font-size:12.5px;color:#6b5e00;margin:8px 0}
+
+  /* Appraisal form */
+  .form-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:22px;text-align:left}
+  .form-card h3{font-size:19px;font-weight:800;letter-spacing:-0.3px}
+  .form-sub{color:var(--muted);font-size:14.5px;margin-top:6px}
+  .field{margin-top:14px}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px}
+  .field label span{color:var(--muted);font-weight:500}
+  .field input,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;-webkit-appearance:none}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--black)}
+  .form-submit{width:100%;margin-top:18px;border:none;cursor:pointer}
+  .form-status{margin-top:12px;font-size:14.5px;font-weight:600;text-align:center;line-height:1.4}
+  .form-status.ok{color:#1f7a1f}
+  .form-status.err{color:#b00020}
+
+  /* Styling tips list */
+  ul.tips{margin-top:14px;padding:0;list-style:none}
+  ul.tips li{position:relative;padding-left:24px;margin-top:13px;font-size:15.5px;color:var(--ink)}
+  ul.tips li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--yellow);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">North Avoca &amp; Surrounds</span>
+    <h1>The <span>North Avoca</span><br/>Update</h1>
+    <p>Local news, community happenings &amp; a look at the market</p>
+    <div class="byline">
+      <span>Ben Bedford</span><span class="dot"></span><span>Ray White</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" data-section="intro">
+  <div class="wrap">
+    <p>G'day — Ben here. I spend most of my week out and about around North Avoca and the beaches, and there's always something happening that's worth sharing. So I thought I'd put together a little local round-up.</p>
+    <p>Here's a bit of what's been going on in our patch lately — plus a quick word on where the property market's sitting.</p>
+  </div>
+</div>
+
+<!-- ============ COMMUNITY ============ -->
+<section class="wrap" data-section="community" id="community">
+  <div class="sec-label">Around the neighbourhood</div>
+
+  <!-- SLSC: Club Person of the Year -->
+  <div class="card">
+    <div class="photo person">
+      <img src="images/brodie-clubperson.png" alt="Brodie, Club Person of the Year" />
+    </div>
+    <div class="body">
+      <span class="tag">Surf Club</span>
+      <h3>Brodie named Club Person of the Year</h3>
+      <p>A huge congratulations to <strong>Brodie</strong>, North Avoca SLSC's 2025/26 Club Person of the Year — recognised for volunteering more than <strong>400 hours</strong> across the patrol season and pitching in across every part of the club. The kind of person who quietly keeps our beach safe and our community ticking.</p>
+      <p class="small">Source: North Avoca Surf Lifesaving Club</p>
+    </div>
+  </div>
+
+  <!-- SLSC: Rookie of the Year -->
+  <div class="card">
+    <div class="photo person">
+      <img src="images/joe-sproll.png" alt="Joe Sproll, Rookie of the Year" />
+    </div>
+    <div class="body">
+      <span class="tag">Surf Club</span>
+      <h3>Joe Sproll — Central Coast Branch Rookie of the Year</h3>
+      <p>And one for the next generation: North Avoca's own <strong>Joe Sproll</strong> took out the <strong>Central Coast Branch Rookie of the Year</strong>. From nippers to junior club captain, Joe's already led initiatives around inclusion and teamwork — a brilliant young lifesaver, and surely just the beginning.</p>
+      <p class="small">Source: North Avoca Surf Lifesaving Club</p>
+    </div>
+  </div>
+
+  <!-- Beach safety -->
+  <div class="card">
+    <div class="photo">
+      <img src="images/rescue-equipment.png" alt="Public rescue equipment and Shark Bite Kit at Lake Street" />
+    </div>
+    <div class="body">
+      <span class="tag">Stay Safe</span>
+      <h3>A quick off-season safety note</h3>
+      <p>With the beach unpatrolled over the off-season, the club's reminded everyone that <strong>Public Rescue Equipment</strong> is on hand for emergencies — including the Shark Bite Kit at the <strong>Lake Street</strong> access. Swimming isn't recommended while it's unpatrolled, so look out for one another out there.</p>
+      <p class="small">Source: North Avoca Surf Lifesaving Club</p>
+    </div>
+  </div>
+
+  <!-- Physio -->
+  <div class="card">
+    <div class="photo logo">
+      <img src="images/peoples-physio.png" alt="People's Physiotherapy" />
+    </div>
+    <div class="body">
+      <span class="tag">New in Town</span>
+      <h3>Welcome, People's Physiotherapy</h3>
+      <p>Great to see <strong>People's Physiotherapy</strong> open up right next to The Boy &amp; The Rose — always a win when quality health care lands close to home. Wishing them a warm welcome to the neighbourhood.</p>
+    </div>
+  </div>
+
+  <!-- General Store -->
+  <div class="card">
+    <div class="body">
+      <span class="tag">Local Legends</span>
+      <h3>Thank you to The General Store</h3>
+      <p>You can't talk about this place without <strong>The General Store</strong> — serving the community for as long as most of us can remember. Thanks for being the heart of the neighbourhood: the early coffees, the chats, and always being there. We're lucky to have you.</p>
+    </div>
+  </div>
+
+  <!-- Boy & Rose -->
+  <div class="card">
+    <div class="body">
+      <span class="tag">Local Legends</span>
+      <h3>The Boy &amp; The Rose, under Sonia</h3>
+      <p>And a shout-out to <strong>The Boy &amp; The Rose</strong>, under the management of <strong>Sonia</strong> for a while now and going strong. Open 7 days, 6am–1pm, walk-ins welcome. They've even got the TV set up for the World Cup soccer — not entirely clear yet whether that's for the staff or the customers, but it's there for a bit of fun! If you haven't dropped in lately, it's well worth a visit. Go say hello.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REAL ESTATE ============ -->
+<section class="wrap" data-section="realestate" id="market">
+  <div class="re">
+    <div class="sec-label">The Market · June 2026</div>
+    <h2>So, what's North Avoca doing?</h2>
+    <p>After the heat of a few years back, our market's settled into a steadier, more balanced rhythm — and that's no bad thing. The median house now sits around <strong>$1.61m</strong>, and while that's eased a touch off the 2021–22 peak, 2026 has actually started <strong>up nearly 10%</strong> on last year. The short version: well-presented homes in the right spot are still selling strongly.</p>
+    <p>Forty-five houses changed hands here over the past year — everything from beachside units to a $4.57m parade sale — so there's genuine, steady demand from buyers who want to call North Avoca home.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">$1.61m</div><div class="l">Median house price</div></div>
+      <div class="stat"><div class="n">45</div><div class="l">Houses sold (12 mo)</div></div>
+      <div class="stat"><div class="n">$940</div><div class="l">Median rent / week</div></div>
+    </div>
+
+    <p style="margin-top:18px">If you've ever wondered what your place might be worth in today's market, I'm always happy to pull the real numbers for your street and give you an honest, no-pressure appraisal.</p>
+    <p class="small" style="color:#8a8a8a;font-size:12.5px;margin-top:14px">Source: Ray White / Pricefinder suburb report, North Avoca houses, 23 June 2026. Based on a rolling 12-month period.</p>
+  </div>
+</section>
+
+<!-- ============ MARKET NEWS ============ -->
+<section class="wrap" data-section="marketnews" id="market-news">
+  <div class="sec-label">Market news</div>
+
+  <!-- Budget -->
+  <div class="card">
+    <div class="body">
+      <span class="tag">Federal Budget</span>
+      <h3>What the 2026–27 Budget means for you</h3>
+      <p>This year's Federal Budget brought some of the biggest housing policy shifts in decades — most of it aimed at property investment. Here's the plain-English version:</p>
+      <ul class="tips">
+        <li><strong>If you own and live in your home:</strong> you're largely unaffected. There are no new taxes on the family home.</li>
+        <li><strong>If you're an investor:</strong> this is where it changes. From 1 July 2027, negative gearing on residential property will generally only apply to newly built homes, and the current 50% capital gains discount is set to be replaced with an inflation-adjusted system carrying a minimum 30% tax rate on realised gains. The likely effect — less appetite for older homes, more focus on new builds.</li>
+        <li><strong>If you're a first-home buyer:</strong> the 5% deposit scheme stays, and the investor changes are designed to ease competition for existing homes and free up more supply.</li>
+      </ul>
+      <p class="small">General information only — have a chat to your accountant or financial adviser about your own situation.</p>
+    </div>
+  </div>
+
+  <!-- Rates -->
+  <div class="card">
+    <div class="body">
+      <span class="tag">Interest Rates</span>
+      <h3>Another move from the Reserve Bank</h3>
+      <p>The RBA lifted the official cash rate by 0.25% to <strong>4.35%</strong> in May 2026 — its third rise for the year. Owner-occupier home loan rates are currently sitting roughly between <strong>5.90% and 6.84% p.a.</strong>, so it's well worth a quick check that you're still on a competitive deal.</p>
+      <p>Local broker <strong>Luke Whitbread</strong> at Mortgage Choice Erina says plenty of borrowers are taking a hybrid approach right now — fixing part of the loan for repayment certainty and keeping the rest variable for flexibility. He also notes some lenders have tightened how they assess investment borrowing, so anyone holding an older pre-approval should double-check their numbers still stand.</p>
+      <p class="small">Not financial advice — speak with your broker or lender about your circumstances.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELLING TIPS ============ -->
+<section class="wrap" data-section="sellingtips" id="winter-styling">
+  <div class="sec-label">Thinking of selling?</div>
+  <div class="card">
+    <div class="body">
+      <span class="tag">Winter Styling</span>
+      <h3>Five easy ways to warm up your home for a winter sale</h3>
+      <p>The cooler months are actually a lovely time to present a home — it's all about making rooms feel snug and welcoming the moment someone walks in. A few favourite tips, with thanks to my go-to stylists at <strong>Form Property</strong>:</p>
+      <ul class="tips">
+        <li><strong>Layer the soft stuff.</strong> Throws and cushions across the lounges and beds instantly make a space feel warm and lived-in.</li>
+        <li><strong>Lean into rich, earthy tones.</strong> Chocolate, berry, terracotta and natural hues give a home that wrapped-up, cosy feel buyers love this time of year.</li>
+        <li><strong>Soften the lighting.</strong> Table and floor lamps cast gentle pools of light and a far cosier mood than harsh overheads — especially on a grey day.</li>
+        <li><strong>Roll out a chunky rug.</strong> A big, textured rug warms a room both to the eye and underfoot, and helps zone open-plan living.</li>
+        <li><strong>Bring the outside in.</strong> A few bare branches or seasonal stems in a vase is a simple, elegant nod to the season.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="wrap cta" data-section="cta">
+  <h2>Curious what your home's worth?</h2>
+  <p>No pressure, no obligation — just a genuine local opinion.</p>
+  <div class="btn-row">
+    <a class="btn" href="tel:+61433778000" data-cta="call">Call Ben — 0433 778 000</a>
+  </div>
+
+  <div class="form-card" id="appraisal">
+    <h3>Or request a free appraisal</h3>
+    <p class="form-sub">Pop your details in and I'll be in touch — usually the same day.</p>
+    <form id="appraisal-form" novalidate>
+      <!-- Web3Forms: free, emails each submission to you. Get your key at web3forms.com -->
+      <input type="hidden" name="access_key" value="4c59115c-ec41-4660-ab5a-1ff81a176860" />
+      <input type="hidden" name="subject" value="New appraisal request — North Avoca Update" />
+      <input type="hidden" name="from_name" value="North Avoca Update" />
+      <!-- honeypot (hidden anti-spam field) -->
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+      <div class="field">
+        <label>Your name</label>
+        <input type="text" name="name" required autocomplete="name" placeholder="First & last name" />
+      </div>
+      <div class="field">
+        <label>Mobile</label>
+        <input type="tel" name="phone" required autocomplete="tel" placeholder="04XX XXX XXX" />
+      </div>
+      <div class="field">
+        <label>Property address <span>(optional)</span></label>
+        <input type="text" name="address" autocomplete="street-address" placeholder="Street, suburb" />
+      </div>
+      <div class="field">
+        <label>Anything else? <span>(optional)</span></label>
+        <textarea name="message" rows="2" placeholder="e.g. just curious, or thinking of selling in spring…"></textarea>
+      </div>
+
+      <button type="submit" class="btn form-submit">Request my appraisal</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="name">Ben Bedford</div>
+    <div>Ray White</div>
+    <div style="margin-top:8px">Proudly local. Always happy to chat. ☕</div>
+  </div>
+</footer>
+
+<!-- ============ META PIXEL ============ -->
+<!-- Pixel 414979734385927 — "Ben Bedford Pixel" -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '414979734385927');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=414979734385927&ev=PageView&noscript=1"/></noscript>
+
+<!-- ============ ENGAGEMENT EVENTS ============ -->
+<script>
+(function(){
+  function fire(name, params){
+    if (window.fbq) fbq('trackCustom', name, params || {});
+  }
+
+  // --- Scroll depth: 50% and 90% ---
+  var hit = {50:false, 90:false};
+  function onScroll(){
+    var doc = document.documentElement;
+    var scrolled = (window.scrollY || doc.scrollTop);
+    var height = doc.scrollHeight - doc.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    if (!hit[50] && pct >= 50){ hit[50] = true; fire('Scroll50'); }
+    if (!hit[90] && pct >= 90){ hit[90] = true; fire('Scroll90'); }
+    if (hit[50] && hit[90]) window.removeEventListener('scroll', onScroll);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // --- Section reached: which parts they actually got to ---
+  var seen = {};
+  var evtName = {
+    community:'ReadCommunity',
+    realestate:'ReadRealEstate',
+    marketnews:'ReadMarketNews',
+    sellingtips:'ReadSellingTips',
+    cta:'ReachedCTA'
+  };
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          var key = en.target.getAttribute('data-section');
+          if (evtName[key] && !seen[key]){ seen[key] = true; fire(evtName[key]); }
+        }
+      });
+    }, {threshold:0.4});
+    document.querySelectorAll('[data-section]').forEach(function(el){ io.observe(el); });
+  }
+
+  // --- Time on page milestone (30s = a genuine read) ---
+  setTimeout(function(){ fire('Engaged30s'); }, 30000);
+
+  // --- CTA taps: treat as Leads/Contact ---
+  document.querySelectorAll('[data-cta]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var type = el.getAttribute('data-cta');
+      if (window.fbq) fbq('track', 'Lead', {content_name:'North Avoca Update', cta:type});
+      fire('CTAClick', {cta:type});
+    });
+  });
+
+  // --- Appraisal form: submit to Web3Forms, fire Lead on success ---
+  var form = document.getElementById('appraisal-form');
+  if (form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var status = document.getElementById('form-status');
+      var btn = form.querySelector('.form-submit');
+      status.className = 'form-status';
+      status.textContent = '';
+
+      if (!form.name.value.trim() || !form.phone.value.trim()){
+        status.className = 'form-status err';
+        status.textContent = 'Please add your name and mobile so I can get back to you.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {'Accept':'application/json'},
+        body: new FormData(form)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(json){
+        if (json.success){
+          form.reset();
+          btn.style.display = 'none';
+          status.className = 'form-status ok';
+          status.textContent = "Thanks! I've got your request and I'll be in touch soon. — Ben";
+          if (window.fbq) fbq('track', 'Lead', {content_name:'North Avoca Update', cta:'appraisal_form'});
+          fire('AppraisalRequest');
+        } else {
+          throw new Error(json.message || 'submit failed');
+        }
+      })
+      .catch(function(){
+        status.className = 'form-status err';
+        status.textContent = 'Sorry, something went wrong — please call Ben on 0433 778 000.';
+        btn.disabled = false;
+        btn.textContent = 'Request my appraisal';
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
